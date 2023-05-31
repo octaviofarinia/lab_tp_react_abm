@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const GrillaInstrumentos = () => {
   const [instrumentos, setInstrumentos] = useState<Product[]>([]);
+  const [search, setSearch] = useState("");
 
   const handleDelete = async (id: string | number) => {
     await deleteInstrumento(id);
@@ -15,11 +16,24 @@ const GrillaInstrumentos = () => {
     getInstrumentos({ setter: setInstrumentos });
   }, []);
 
+  const filteredInstrumentos = instrumentos.filter((product) =>
+    product.instrumento.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <div className="flex flex-col">
       <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
           <div className="overflow-hidden">
+            <div className="px-6 py-4">
+              <input
+                type="text"
+                placeholder="Buscar por Instrumento"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="p-2 border rounded"
+              />
+            </div>
             <table className="min-w-full text-left text-sm font-light">
               <thead className="border-b font-medium dark:border-neutral-500">
                 <tr>
@@ -56,7 +70,7 @@ const GrillaInstrumentos = () => {
                 </tr>
               </thead>
               <tbody>
-                {instrumentos.map((product, index) => (
+                {filteredInstrumentos.map((product, index) => (
                   <tr className="border-b dark:border-neutral-500" key={index}>
                     <td className="whitespace-nowrap px-6 py-4 font-medium">
                       {product.id}
