@@ -1,0 +1,20 @@
+.locationContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  gap: 20px;
+}
+.locationContainer iframe {
+  border-radius: 15px;
+  border: 2px solid rgba(220, 220, 220, 0.8);
+}
+.locationContainer h3 {
+   text-align: center;
+   font-size: 45px;
+   text-transform: uppercase;
+   color: brown;
+
+}

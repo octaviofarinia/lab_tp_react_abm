@@ -1,0 +1,58 @@
+BACKEND/HELP.md
+BACKEND/target/
+!BACKEND/.mvn/wrapper/maven-wrapper.jar
+!BACKEND/**/src/main/**/target/
+!BACKEND/**/src/test/**/target/
+
+### STS ###
+BACKEND/.apt_generated
+BACKEND/.classpath
+BACKEND/.factorypath
+BACKEND/.project
+BACKEND/.settings
+BACKEND/.springBeans
+BACKEND/.sts4-cache
+
+### IntelliJ IDEA ###
+BACKEND/.idea
+BACKEND/*.iws
+BACKEND/*.iml
+BACKEND/*.ipr
+
+### NetBeans ###
+BACKEND/nbproject/private/
+BACKEND/nbbuild/
+BACKEND/dist/
+BACKEND/nbdist/
+BACKEND/.nb-gradle/
+BACKEND/build/
+!BACKEND/**/src/main/**/build/
+!BACKEND/**/src/test/**/build/
+
+### VS Code ###
+BACKEND/.vscode/
+
+# Logs
+FRONTEND/logs
+FRONTEND/*.log
+FRONTEND/npm-debug.log*
+FRONTEND/yarn-debug.log*
+FRONTEND/yarn-error.log*
+FRONTEND/pnpm-debug.log*
+FRONTEND/lerna-debug.log*
+
+FRONTEND/node_modules
+FRONTEND/dist
+FRONTEND/dist-ssr
+FRONTEND/*.local
+
+# Editor directories and files
+FRONTEND/.vscode/*
+!FRONTEND/.vscode/extensions.json
+FRONTEND/.idea
+FRONTEND/.DS_Store
+FRONTEND/*.suo
+FRONTEND/*.ntvs*
+FRONTEND/*.njsproj
+FRONTEND/*.sln
+FRONTEND/*.sw?
